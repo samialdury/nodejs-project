@@ -1,0 +1,12 @@
+.git
+.husky
+.DS_Store
+.cache
+
+node_modules
+build
+dist
+coverage
+
+pnpm-lock.yaml
+*.md
