@@ -1,0 +1,66 @@
+name: Release
+
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - 'main'
+
+concurrency: release-${{ github.ref_name }}
+
+env:
+    NODE_VERSION: 20
+    PNPM_VERSION: 8
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write # to be able to publish a GitHub release
+            issues: write # to be able to comment on released issues
+            pull-requests: write # to be able to comment on released pull requests
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+              timeout-minutes: 2
+
+            - name: Set up pnpm
+              uses: pnpm/action-setup@v2
+              timeout-minutes: 2
+              with:
+                  version: ${{ env.PNPM_VERSION }}
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              timeout-minutes: 2
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+                  cache: pnpm
+                  cache-dependency-path: pnpm-lock.yaml
+
+            - name: Get pnpm store directory
+              id: pnpm-store
+              timeout-minutes: 2
+              run: |
+                  echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+            - name: Restore pnpm cache
+              uses: actions/cache@v3
+              timeout-minutes: 2
+              with:
+                  path: ${{ steps.pnpm-store.outputs.STORE_PATH }}
+                  key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-pnpm-${{ env.PNPM_VERSION }}-store-${{ hashFiles('pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-node-${{ env.NODE_VERSION }}-pnpm-${{ env.PNPM_VERSION }}-store-
+
+            - name: Install NPM dependencies
+              timeout-minutes: 2
+              run: |
+                  pnpm install --frozen-lockfile
+
+            - name: Release
+              timeout-minutes: 2
+              run: |
+                  pnpm exec semantic-release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

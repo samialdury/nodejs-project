@@ -64,19 +64,23 @@ jobs:
 
             - name: Install NPM dependencies
               timeout-minutes: 2
-              run: pnpm install --frozen-lockfile
+              run: |
+                  pnpm install --frozen-lockfile
 
             - name: Build TypeScript
               timeout-minutes: 2
-              run: pnpm run build
+              run: |
+                  pnpm run build
 
             - name: Run tests
               timeout-minutes: 2
-              run: pnpm test
+              run: |
+                  pnpm test
 
             - name: Check format & lint errors
               timeout-minutes: 2
-              run: pnpm lint:check
+              run: |
+                  pnpm lint:check
 
     docker:
         needs: [check]
