@@ -3,8 +3,9 @@ ARG PNPM_VERSION=8
 ARG TINI_VERSION="v0.19.0"
 ARG WORK_DIR="/app"
 
-ARG LOG_LEVEL="info"
 ARG COMMIT_SHA="unknown"
+
+ARG LOG_LEVEL="info"
 ARG PROJECT_NAME="nodejs-project"
 
 ################################################################
@@ -87,16 +88,16 @@ RUN node-prune
 FROM node-distroless as final
 
 ARG WORK_DIR
-ARG LOG_LEVEL
 ARG COMMIT_SHA
+ARG LOG_LEVEL
 ARG PROJECT_NAME
 
 WORKDIR ${WORK_DIR}
 
 ENV NODE_OPTIONS="--enable-source-maps"
 ENV NODE_ENV="production"
-ENV LOG_LEVEL=${LOG_LEVEL}
 ENV COMMIT_SHA=${COMMIT_SHA}
+ENV LOG_LEVEL=${LOG_LEVEL}
 ENV PROJECT_NAME=${PROJECT_NAME}
 
 COPY --from=node-alpine --chown=nonroot:nonroot /tini /tini

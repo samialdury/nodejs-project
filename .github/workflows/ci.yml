@@ -27,6 +27,7 @@ env:
 
 jobs:
     check:
+        name: Check
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -62,7 +63,7 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-node-${{ env.NODE_VERSION }}-pnpm-${{ env.PNPM_VERSION }}-store-
 
-            - name: Install NPM dependencies
+            - name: Install npm dependencies
               timeout-minutes: 2
               run: |
                   pnpm install --frozen-lockfile
@@ -84,6 +85,7 @@ jobs:
 
     docker:
         needs: [check]
+        name: Docker
         runs-on: ubuntu-latest
         permissions:
             packages: write

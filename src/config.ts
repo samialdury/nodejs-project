@@ -2,6 +2,10 @@ import { createConfig, type EnveySchema, type InferEnveyConfig } from 'envey'
 import { z } from 'zod'
 
 const schema = {
+    commitSha: {
+        env: 'COMMIT_SHA',
+        format: z.string(),
+    },
     nodeEnv: {
         env: 'NODE_ENV',
         format: z.enum(['production', 'test', 'development']),
@@ -17,10 +21,6 @@ const schema = {
             'trace',
             'silent',
         ]),
-    },
-    commitSha: {
-        env: 'COMMIT_SHA',
-        format: z.string(),
     },
     projectName: {
         env: 'PROJECT_NAME',
