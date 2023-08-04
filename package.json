@@ -3,19 +3,6 @@
     "version": "1.3.0",
     "private": true,
     "type": "module",
-    "scripts": {
-        "build": "tsc",
-        "dev": "node --no-warnings --require dotenv/config --loader tsx --watch --watch-preserve-output src/main.ts | pino-pretty",
-        "eslint:check": "eslint --max-warnings 0 .",
-        "eslint:write": "eslint --max-warnings 0 --cache --cache-location .cache/eslint --fix .",
-        "lint:check": "pnpm run prettier:check && pnpm run eslint:check",
-        "lint:write": "pnpm run prettier:write && pnpm run eslint:write",
-        "prepare": "husky install",
-        "prettier:check": "prettier --check .",
-        "prettier:write": "prettier --cache --cache-location=.cache/prettier --write .",
-        "test": "glob -c 'DOTENV_CONFIG_PATH=.test.env node --no-warnings --require dotenv/config --loader tsx --test' '{src,test}/**/*.test.ts'",
-        "test:watch": "glob -c 'DOTENV_CONFIG_PATH=.test.env node --no-warnings --require dotenv/config --loader tsx --watch --watch-preserve-output --test' '{src,test}/**/*.test.ts'"
-    },
     "dependencies": {
         "envey": "1.1.3",
         "pino": "8.15.0",

@@ -66,22 +66,27 @@ jobs:
             - name: Install npm dependencies
               timeout-minutes: 2
               run: |
-                  pnpm install --frozen-lockfile
+                  make install-ci
 
             - name: Build TypeScript
               timeout-minutes: 2
               run: |
-                  pnpm run build
+                  make build-ci
 
             - name: Run tests
               timeout-minutes: 2
               run: |
-                  pnpm test
+                  make test-ci
 
-            - name: Check format & lint errors
+            - name: Check formatting
               timeout-minutes: 2
               run: |
-                  pnpm lint:check
+                  make format-ci
+
+            - name: Check lint errors
+              timeout-minutes: 2
+              run: |
+                  make lint-ci
 
     docker:
         needs: [check]

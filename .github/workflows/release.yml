@@ -60,12 +60,12 @@ jobs:
             - name: Install npm dependencies
               timeout-minutes: 2
               run: |
-                  pnpm install --frozen-lockfile
+                  make install-ci
 
             - name: Release to GitHub
               timeout-minutes: 2
               run: |
-                  pnpm exec semantic-release
+                  make release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   GIT_AUTHOR_NAME: 'github-actions[bot]'
