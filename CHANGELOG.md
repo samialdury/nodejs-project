@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/samialdury/nodejs-project/compare/v1.1.0...v1.2.0) (2023-08-04)
+
+
+### Features
+
+* git hooks ([#1](https://github.com/samialdury/nodejs-project/issues/1)) ([d84e0df](https://github.com/samialdury/nodejs-project/commit/d84e0df3ae624a6bcfced8b9c14b076cb663fcd8))
+
 # [1.1.0](https://github.com/samialdury/nodejs-project/compare/v1.0.0...v1.1.0) (2023-08-03)
 
 
