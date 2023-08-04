@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/samialdury/nodejs-project/compare/v1.2.0...v1.3.0) (2023-08-04)
+
+
+### Features
+
+* tweak release pipeline ([cce5bab](https://github.com/samialdury/nodejs-project/commit/cce5bab39e9bde19871bb0a77c2fc904a57f6721))
+
 # [1.2.0](https://github.com/samialdury/nodejs-project/compare/v1.1.0...v1.2.0) (2023-08-04)
 
 
