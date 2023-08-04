@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/samialdury/nodejs-project/compare/v1.3.0...v1.4.0) (2023-08-04)
+
+
+### Features
+
+* makefile ([3dadbfe](https://github.com/samialdury/nodejs-project/commit/3dadbfe05d72a42232f0d49201a9a6d21571d2a8))
+* update deps ([0dd1798](https://github.com/samialdury/nodejs-project/commit/0dd1798b3b06f02c7f359f71858bcae1b75a01ea))
+* wip ([1dff532](https://github.com/samialdury/nodejs-project/commit/1dff5326eb5a12dc10547b39604faf601cb88ec8))
+
 # [1.3.0](https://github.com/samialdury/nodejs-project/compare/v1.2.0...v1.3.0) (2023-08-04)
 
 
