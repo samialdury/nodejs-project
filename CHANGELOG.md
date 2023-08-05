@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/samialdury/nodejs-project/compare/v1.4.2...v1.5.0) (2023-08-05)
+
+
+### Features
+
+* use custom bot for releases ([c0d01e5](https://github.com/samialdury/nodejs-project/commit/c0d01e571a1de742e50a01510f95eb03766889f0))
+
 ## [1.4.2](https://github.com/samialdury/nodejs-project/compare/v1.4.1...v1.4.2) (2023-08-05)
 
 
