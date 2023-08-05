@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/samialdury/nodejs-project/compare/v1.5.0...v1.5.1) (2023-08-05)
+
+
+### Bug Fixes
+
+* **ci:** do not skip-ci on new version commit ([d333b0b](https://github.com/samialdury/nodejs-project/commit/d333b0b691ffce4e11c657e6affad1b28eee01fe))
+
 # [1.5.0](https://github.com/samialdury/nodejs-project/compare/v1.4.2...v1.5.0) (2023-08-05)
 
 
