@@ -25,14 +25,8 @@ devDependencies:
     specifier: 17.6.7
     version: 17.6.7
   '@samialdury/config':
-    specifier: 5.4.1
-    version: 5.4.1(@commitlint/cli@17.6.7)(eslint@8.46.0)(lint-staged@13.2.3)(prettier@3.0.1)(semantic-release@21.0.7)(typescript@5.1.6)
-  '@semantic-release/changelog':
-    specifier: 6.0.3
-    version: 6.0.3(semantic-release@21.0.7)
-  '@semantic-release/git':
-    specifier: 10.0.1
-    version: 10.0.1(semantic-release@21.0.7)
+    specifier: 5.5.0
+    version: 5.5.0(@commitlint/cli@17.6.7)(eslint@8.46.0)(lint-staged@13.2.3)(prettier@3.0.1)(semantic-release@21.0.7)(typescript@5.1.6)
   '@total-typescript/ts-reset':
     specifier: 0.4.2
     version: 0.4.2
@@ -748,8 +742,8 @@ packages:
       config-chain: 1.1.13
     dev: true
 
-  /@samialdury/config@5.4.1(@commitlint/cli@17.6.7)(eslint@8.46.0)(lint-staged@13.2.3)(prettier@3.0.1)(semantic-release@21.0.7)(typescript@5.1.6):
-    resolution: {integrity: sha512-D8B5ZQG32xeBxhfjErogJG9Rvb/CqI5ewsCKjyokbDGXS2/lqk3GfI/DgjXbVa4ayIBx24zXv7uvUaPZP3niHw==}
+  /@samialdury/config@5.5.0(@commitlint/cli@17.6.7)(eslint@8.46.0)(lint-staged@13.2.3)(prettier@3.0.1)(semantic-release@21.0.7)(typescript@5.1.6):
+    resolution: {integrity: sha512-w92D+GmoENvOXS+7cU+AYUKJe9e5ktkujr6zKyG++uzKBA46lwD6v6pBVkagRNbKugBEtc8CMDIrkUUt4D3Ifg==}
     peerDependencies:
       '@commitlint/cli': ^17.0.0
       eslint: ^8.0.0
@@ -760,6 +754,8 @@ packages:
       '@commitlint/cli': 17.6.7
       '@commitlint/config-conventional': 17.6.7
       '@eslint/js': 8.46.0
+      '@semantic-release/changelog': 6.0.3(semantic-release@21.0.7)
+      '@semantic-release/git': 10.0.1(semantic-release@21.0.7)
       '@typescript-eslint/eslint-plugin': 6.2.0(@typescript-eslint/parser@6.2.0)(eslint@8.46.0)(typescript@5.1.6)
       '@typescript-eslint/parser': 6.2.0(eslint@8.46.0)(typescript@5.1.6)
       eslint: 8.46.0
