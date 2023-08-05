@@ -15,11 +15,6 @@ dependencies:
     specifier: 3.21.4
     version: 3.21.4
 
-optionalDependencies:
-  husky:
-    specifier: 8.0.3
-    version: 8.0.3
-
 devDependencies:
   '@commitlint/cli':
     specifier: 17.6.7
@@ -42,6 +37,9 @@ devDependencies:
   glob:
     specifier: 10.3.3
     version: 10.3.3
+  husky:
+    specifier: 8.0.3
+    version: 8.0.3
   lint-staged:
     specifier: 13.2.3
     version: 13.2.3
@@ -2865,8 +2863,7 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
-    dev: false
-    optional: true
+    dev: true
 
   /ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
