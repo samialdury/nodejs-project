@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/samialdury/nodejs-project/compare/v1.4.1...v1.4.2) (2023-08-05)
+
+
+### Bug Fixes
+
+* update dpendencies ([e806f23](https://github.com/samialdury/nodejs-project/commit/e806f23105c72d843ac6280aeb48400e75406038))
+
 ## [1.4.1](https://github.com/samialdury/nodejs-project/compare/v1.4.0...v1.4.1) (2023-08-05)
 
 # [1.4.0](https://github.com/samialdury/nodejs-project/compare/v1.3.0...v1.4.0) (2023-08-04)
