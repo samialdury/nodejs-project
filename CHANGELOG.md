@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/samialdury/nodejs-project/compare/v1.5.1...v1.5.2) (2023-08-05)
+
+
+### Bug Fixes
+
+* update dpendencies ([2852b2a](https://github.com/samialdury/nodejs-project/commit/2852b2ac9009bbc0c5a04ef58367adae929affa8))
+
 ## [1.5.1](https://github.com/samialdury/nodejs-project/compare/v1.5.0...v1.5.1) (2023-08-05)
 
 
