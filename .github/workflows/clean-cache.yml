@@ -1,0 +1,74 @@
+name: Clean actions cache
+
+# https://github.com/actions/gh-actions-cache
+
+on:
+    workflow_dispatch:
+        inputs:
+            branch:
+                description: 'Branch'
+                required: true
+            limit:
+                description: 'Limit'
+                required: true
+
+concurrency: clean-actions-cache-${{ inputs.branch }}
+
+jobs:
+    clean:
+        runs-on: ubuntu-22.04
+        permissions:
+            actions: write
+            contents: read
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+              timeout-minutes: 2
+
+            - name: Clean actions cache
+              timeout-minutes: 20
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  gh extension install actions/gh-actions-cache
+
+                  REPO=${{ github.repository }}
+                  BRANCH_INPUT=${{ inputs.branch }}
+                  LIMIT_INPUT=${{ inputs.limit }}
+                  MAX_LIMIT=100
+
+                  echo "Cleaning cache for repo $REPO and branch $BRANCH_INPUT with limit $LIMIT_INPUT"
+
+                  set +e
+
+                  delete_caches() {
+                    local limit=$1
+                    local cacheKeys=$(gh actions-cache list -L $limit -R $REPO -B $BRANCH_INPUT --sort size --order desc | cut -f1)
+
+                    echo "delete_caches() - limit $limit, repo $REPO, branch $BRANCH_INPUT"
+
+                    for cacheKey in $cacheKeys; do
+                      gh actions-cache delete $cacheKey -R $REPO -B $BRANCH_INPUT --confirm
+                    done
+                  }
+
+                  # The max limit supported by the script is defined by the MAX_LIMIT variable. 
+                  # If it's greater, we need to split the limit into multiple requests.
+                  if [ "$LIMIT_INPUT" -le "$MAX_LIMIT" ]; then
+                    delete_caches $LIMIT_INPUT
+                  else
+                    TIMES=$((LIMIT_INPUT / MAX_LIMIT))
+                    REMAINDER=$((LIMIT_INPUT % MAX_LIMIT))
+
+                    for i in $(seq 1 "$TIMES"); do
+                      delete_caches $MAX_LIMIT
+                    done
+
+                    if [ "$REMAINDER" -gt 0 ]; then
+                      delete_caches $REMAINDER
+                    fi
+                  fi
+
+                  set -e
+
+                  echo "Cache cleaned successfully"
