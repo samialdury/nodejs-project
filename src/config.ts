@@ -28,7 +28,9 @@ const schema = {
     },
 } satisfies EnveySchema
 
-export let config: InferEnveyConfig<typeof schema>
+export type Config = InferEnveyConfig<typeof schema>
+
+export let config: Config
 
 export function initConfig(): void {
     config = createConfig(z, schema, { validate: true })

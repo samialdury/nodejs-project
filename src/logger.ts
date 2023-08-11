@@ -1,15 +1,13 @@
 import { pino } from 'pino'
 
-import { config } from './config.js'
+import type { Config } from './config.js'
 
 export let logger: pino.Logger
 
-export function initLogger(): void {
-    const { projectName, logLevel } = config
-
+export function initLogger(config: Config): void {
     logger = pino({
-        name: projectName,
-        level: logLevel,
+        name: config.projectName,
+        level: config.logLevel,
     })
 
     logger.debug('Logger initialized')
