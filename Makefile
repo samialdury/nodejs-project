@@ -7,6 +7,10 @@ SRC_DIR := src
 BUILD_DIR := build
 CACHE_DIR := .cache
 
+.DEFAULT_GOAL := help
+
+##@ Misc
+
 .PHONY: help
 ## Display this help
 help:
@@ -21,7 +25,7 @@ install: ## install all dependencies
 
 .PHONY: dev
 dev: ## run TS and watch for changes
-	@node --no-warnings --require dotenv/config --loader tsx --watch --watch-preserve-output $(SRC_DIR)/main.ts | $(BIN)/pino-pretty
+	@DOTENV_CONFIG_PATH=.dev.env node --no-warnings --require dotenv/config --loader tsx --watch --watch-preserve-output $(SRC_DIR)/main.ts | $(BIN)/pino-pretty
 
 .PHONY: run
 run: ## run JS

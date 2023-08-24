@@ -6,10 +6,6 @@ const schema = {
         env: 'COMMIT_SHA',
         format: z.string(),
     },
-    nodeEnv: {
-        env: 'NODE_ENV',
-        format: z.enum(['production', 'test', 'development']),
-    },
     logLevel: {
         env: 'LOG_LEVEL',
         format: z.enum([

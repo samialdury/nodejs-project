@@ -9,4 +9,6 @@ dist
 coverage
 
 pnpm-lock.yaml
+
 *.md
+*.sh
