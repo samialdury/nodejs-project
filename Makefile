@@ -25,11 +25,11 @@ install: ## install all dependencies
 
 .PHONY: dev
 dev: ## run TS and watch for changes
-	@DOTENV_CONFIG_PATH=.dev.env node --no-warnings --require dotenv/config --loader tsx --watch --watch-preserve-output $(SRC_DIR)/main.ts | $(BIN)/pino-pretty
+	@node --env-file .dev.env --no-warnings --loader tsx --watch --watch-preserve-output $(SRC_DIR)/main.ts | $(BIN)/pino-pretty
 
 .PHONY: run
 run: ## run JS
-	@node --require dotenv/config $(BUILD_DIR)/$(SRC_DIR)/main.js | $(BIN)/pino-pretty
+	@node --env-file .env $(BUILD_DIR)/$(SRC_DIR)/main.js | $(BIN)/pino-pretty
 
 ##@ Build
 
@@ -46,11 +46,11 @@ build-image: ## build Docker image (args=<build args>, tag=<string>)
 
 .PHONY: test
 test: ## run tests
-	@$(BIN)/glob -c 'DOTENV_CONFIG_PATH=.test.env node --no-warnings --require dotenv/config --loader tsx --test' '{src,test}/**/*.test.ts'
+	@$(BIN)/glob -c 'node --env-file .test.env --no-warnings --loader tsx --test' '{src,test}/**/*.test.ts'
 
 .PHONY: test-watch
 test-watch: ## run tests and watch for changes
-	@$(BIN)/glob -c 'DOTENV_CONFIG_PATH=.test.env node --no-warnings --require dotenv/config --loader tsx --watch --watch-preserve-output --test' '{src,test}/**/*.test.ts'
+	@$(BIN)/glob -c 'node --env-file .test.env --no-warnings --loader tsx --watch --watch-preserve-output --test' '{src,test}/**/*.test.ts'
 
 ##@ Code quality
 
