@@ -1,4 +1,4 @@
-import { createConfig, type EnveySchema, type InferEnveyConfig } from 'envey'
+import { type EnveySchema, type InferEnveyConfig, createConfig } from 'envey'
 import { z } from 'zod'
 
 const schema = {
@@ -26,8 +26,14 @@ const schema = {
 
 export type Config = InferEnveyConfig<typeof schema>
 
-export let config: Config
+export function initConfig(): Config {
+    const result = createConfig(z, schema, { validate: true })
 
-export function initConfig(): void {
-    config = createConfig(z, schema, { validate: true })
+    if (!result.success) {
+        // eslint-disable-next-line no-console
+        console.error(result.error.issues)
+        throw new Error('Invalid config')
+    }
+
+    return result.config
 }
