@@ -1,3 +1,8 @@
 import { eslint } from '@samialdury/config'
 
-export default [...eslint.config({ node: true })]
+export default [
+    ...eslint.config({ node: true, typeScript: true }),
+    {
+        ignores: ['**/prepare-template.js'],
+    },
+]
