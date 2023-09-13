@@ -26,7 +26,7 @@ help: ## Display this help
 .PHONY: prepare
 prepare: ## Prepare template (name=<string>)
 	@node local/scripts/prepare-template.js $(name)
-	@rm -rf local/scripts
+	@rm -rf local
 
 ##@ Development
 
