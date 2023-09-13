@@ -14,6 +14,9 @@ on:
 
 concurrency: clean-actions-cache-${{ inputs.branch }}
 
+env:
+    TERM: xterm-256color
+
 jobs:
     clean:
         runs-on: ubuntu-22.04
