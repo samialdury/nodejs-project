@@ -1,11 +1,7 @@
-<div align="center">
-
 # Node.js project template
 
 [![CI status](https://github.com/samialdury/nodejs-project/actions/workflows/ci.yml/badge.svg)](https://github.com/samialdury/nodejs-project/actions/workflows/ci.yml)
 ![license](https://img.shields.io/github/license/samialdury/nodejs-project)
-
-</div>
 
 Node.js project template designed to get you up and running quickly, whether you're building a CLI tool or a web server.
 
