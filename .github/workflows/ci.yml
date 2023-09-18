@@ -112,7 +112,7 @@ jobs:
 
             - name: Extract metadata for Docker
               id: docker-meta
-              uses: docker/metadata-action@v4
+              uses: docker/metadata-action@v5
               timeout-minutes: 2
               with:
                   images: |
