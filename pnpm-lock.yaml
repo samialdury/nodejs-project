@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   envey:
-    specifier: 2.0.0
-    version: 2.0.0(zod@3.22.2)
+    specifier: 2.1.0
+    version: 2.1.0(zod@3.22.2)
   pino:
     specifier: 8.15.1
     version: 8.15.1
@@ -20,8 +20,8 @@ devDependencies:
     specifier: 17.7.1
     version: 17.7.1
   '@samialdury/config':
-    specifier: 5.10.0
-    version: 5.10.0(@commitlint/cli@17.7.1)(eslint@8.49.0)(lint-staged@14.0.1)(prettier@3.0.3)(semantic-release@21.1.1)(typescript@5.2.2)
+    specifier: 5.11.0
+    version: 5.11.0(@commitlint/cli@17.7.1)(eslint@8.49.0)(lint-staged@14.0.1)(prettier@3.0.3)(semantic-release@21.1.1)(typescript@5.2.2)
   '@total-typescript/ts-reset':
     specifier: 0.5.1
     version: 0.5.1
@@ -86,11 +86,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@babel/helper-validator-identifier@7.22.5:
-    resolution: {integrity: sha512-aJXu+6lErq8ltp+JhkJUfk1MTGyuA4v7f3pA+BJ5HLfNC6nAQ0Cpi9uOquUj8Hehg0aUiHzWQbOVJGao6ztBAQ==}
-    engines: {node: '>=6.9.0'}
-    dev: true
-
   /@babel/highlight@7.22.13:
     resolution: {integrity: sha512-C/BaXcnnvBCmHTpz/VGZ8jgtE2aYlW4hxDhseJAWZb7gqGM/qtCK6iZUb0TyKFf7BOUsBH7Q7fkRsDRhg1XklQ==}
     engines: {node: '>=6.9.0'}
@@ -104,7 +99,7 @@ packages:
     resolution: {integrity: sha512-BSKlD1hgnedS5XRnGOljZawtag7H1yPfQp0tdNJCHoH6AZ+Pcm9VvkrK59/Yy593Ypg0zMxH2BxD1VPYUQ7UIw==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/helper-validator-identifier': 7.22.5
+      '@babel/helper-validator-identifier': 7.22.15
       chalk: 2.4.2
       js-tokens: 4.0.0
     dev: true
@@ -767,8 +762,8 @@ packages:
       config-chain: 1.1.13
     dev: true
 
-  /@samialdury/config@5.10.0(@commitlint/cli@17.7.1)(eslint@8.49.0)(lint-staged@14.0.1)(prettier@3.0.3)(semantic-release@21.1.1)(typescript@5.2.2):
-    resolution: {integrity: sha512-cnN14X9hHGL73n4P7TVc6+C6nxyI5t5B0C0RU3PyEzz3A+/kO6NZDS9EnsDpdbstKntbka3dJBr5yoU70us0NQ==}
+  /@samialdury/config@5.11.0(@commitlint/cli@17.7.1)(eslint@8.49.0)(lint-staged@14.0.1)(prettier@3.0.3)(semantic-release@21.1.1)(typescript@5.2.2):
+    resolution: {integrity: sha512-4gcGEzzkwqPsNFUfbHCPXHKqPBWaNiPFLnuM5auptcuPUc1tsNS8ATQ6fsFiHnCCv6ArimLSlRDNc9Evja3SvQ==}
     peerDependencies:
       '@commitlint/cli': ^17.0.0
       eslint: ^8.0.0
@@ -1936,9 +1931,9 @@ packages:
       java-properties: 1.0.2
     dev: true
 
-  /envey@2.0.0(zod@3.22.2):
-    resolution: {integrity: sha512-temxSiIHjfQDZWqS/vCrDYQZj9vvRHJIqC0cZ2dRXNzd+1EZV0neiVDnHKybJn41oIOYuV+BV5Lrkuq7CxwG+A==}
-    engines: {node: '>=18'}
+  /envey@2.1.0(zod@3.22.2):
+    resolution: {integrity: sha512-oxVddHPwhf42j5bxy7rdSJWeBoBTfYgv3U4fEA0xRXnM1UmPen8e8FDQAQUmkc4eCh8nBGUl2ZIVNTw5uUhq3w==}
+    engines: {node: '>=20'}
     peerDependencies:
       zod: ^3.0.0
     dependencies:

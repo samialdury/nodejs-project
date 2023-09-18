@@ -4,13 +4,13 @@
     "private": true,
     "type": "module",
     "dependencies": {
-        "envey": "2.0.0",
+        "envey": "2.1.0",
         "pino": "8.15.1",
         "zod": "3.22.2"
     },
     "devDependencies": {
         "@commitlint/cli": "17.7.1",
-        "@samialdury/config": "5.10.0",
+        "@samialdury/config": "5.11.0",
         "@total-typescript/ts-reset": "0.5.1",
         "@types/node": "20.6.1",
         "eslint": "8.49.0",
