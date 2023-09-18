@@ -103,7 +103,7 @@ jobs:
 
             - name: Set up QEMU
               if: contains(env.IMAGE_PLATFORMS, ',')
-              uses: docker/setup-qemu-action@v2
+              uses: docker/setup-qemu-action@v3
               timeout-minutes: 2
 
             - name: Set up Docker Buildx
