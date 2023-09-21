@@ -9,7 +9,6 @@ YELLOW ?= $(shell tput setaf 3)
 CYAN ?= $(shell tput setaf 6)
 NC ?= $(shell tput sgr0)
 
-
 BIN := node_modules/.bin
 
 SRC_DIR ?= src
