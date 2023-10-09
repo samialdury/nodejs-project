@@ -7,13 +7,13 @@ settings:
 dependencies:
   envey:
     specifier: 2.2.0
-    version: 2.2.0(zod@3.22.3)
+    version: 2.2.0(zod@3.22.4)
   pino:
-    specifier: 8.15.1
-    version: 8.15.1
+    specifier: 8.15.6
+    version: 8.15.6
   zod:
-    specifier: 3.22.3
-    version: 3.22.3
+    specifier: 3.22.4
+    version: 3.22.4
 
 devDependencies:
   '@commitlint/cli':
@@ -41,8 +41,8 @@ devDependencies:
     specifier: 14.0.1
     version: 14.0.1
   pino-pretty:
-    specifier: 10.2.0
-    version: 10.2.0
+    specifier: 10.2.3
+    version: 10.2.3
   prettier:
     specifier: 3.0.3
     version: 3.0.3
@@ -1849,13 +1849,13 @@ packages:
       java-properties: 1.0.2
     dev: true
 
-  /envey@2.2.0(zod@3.22.3):
+  /envey@2.2.0(zod@3.22.4):
     resolution: {integrity: sha512-yemIczrg1ggr/AteWwtOnbKLdMxXcnPFL1czljKeLOWHtC4qBdczeNNgGO4KKe12V/GYt1Fe6wRGoqIlfd1kqQ==}
     engines: {node: '>=20'}
     peerDependencies:
       zod: ^3.0.0
     dependencies:
-      zod: 3.22.3
+      zod: 3.22.4
     dev: false
 
   /error-ex@1.3.2:
@@ -3983,22 +3983,14 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pino-abstract-transport@1.0.0:
-    resolution: {integrity: sha512-c7vo5OpW4wIS42hUVcT5REsL8ZljsUfBjqV/e2sFxmFEFZiq1XLUp5EYLtuDH6PEHq9W1egWqRbnLUP5FuZmOA==}
-    dependencies:
-      readable-stream: 4.4.2
-      split2: 4.2.0
-    dev: true
-
   /pino-abstract-transport@1.1.0:
     resolution: {integrity: sha512-lsleG3/2a/JIWUtf9Q5gUNErBqwIu1tUKTT3dUzaf5DySw9ra1wcqKjJjLX1VTY64Wk1eEOYsVGSaGfCK85ekA==}
     dependencies:
       readable-stream: 4.4.2
       split2: 4.2.0
-    dev: false
 
-  /pino-pretty@10.2.0:
-    resolution: {integrity: sha512-tRvpyEmGtc2D+Lr3FulIZ+R1baggQ4S3xD2Ar93KixFEDx6SEAUP3W5aYuEw1C73d6ROrNcB2IXLteW8itlwhA==}
+  /pino-pretty@10.2.3:
+    resolution: {integrity: sha512-4jfIUc8TC1GPUfDyMSlW1STeORqkoxec71yhxIpLDQapUu8WOuoz2TTCoidrIssyz78LZC69whBMPIKCMbi3cw==}
     hasBin: true
     dependencies:
       colorette: 2.0.20
@@ -4009,7 +4001,7 @@ packages:
       joycon: 3.1.1
       minimist: 1.2.8
       on-exit-leak-free: 2.1.0
-      pino-abstract-transport: 1.0.0
+      pino-abstract-transport: 1.1.0
       pump: 3.0.0
       readable-stream: 4.4.2
       secure-json-parse: 2.7.0
@@ -4021,8 +4013,8 @@ packages:
     resolution: {integrity: sha512-cHjPPsE+vhj/tnhCy/wiMh3M3z3h/j15zHQX+S9GkTBgqJuTuJzYJ4gUyACLhDaJ7kk9ba9iRDmbH2tJU03OiA==}
     dev: false
 
-  /pino@8.15.1:
-    resolution: {integrity: sha512-Cp4QzUQrvWCRJaQ8Lzv0mJzXVk4z2jlq8JNKMGaixC2Pz5L4l2p95TkuRvYbrEbe85NQsDKrAd4zalf7Ml6WiA==}
+  /pino@8.15.6:
+    resolution: {integrity: sha512-GuxHr61R0ZFD1npu58tB3a3FSVjuy21OwN/haw4OuKiZBL63Pg11Y51WWeD52RENS2mjwPZOwt+2OQOSkck6kQ==}
     hasBin: true
     dependencies:
       atomic-sleep: 1.0.0
@@ -5225,6 +5217,6 @@ packages:
     engines: {node: '>=12.20'}
     dev: true
 
-  /zod@3.22.3:
-    resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
     dev: false
