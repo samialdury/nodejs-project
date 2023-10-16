@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable unicorn/no-process-exit */
 /**
  * This script is used to prepare the template for a new project.
  * It will replace all occurrences of the default project name with the target project name.
@@ -9,8 +11,8 @@
  *
  * * It is safe to delete this file after running it.
  */
-import cp from 'child_process'
-import fs from 'fs/promises'
+import cp from 'node:child_process'
+import fs from 'node:fs/promises'
 import path from 'node:path'
 
 function getDirname() {
@@ -45,27 +47,28 @@ async function removeFileIfExists(filePath) {
 }
 
 async function replaceInFile(filePath, search, replacement) {
-    const fileContent = await fs.readFile(filePath, 'utf-8')
+    const fileContent = await fs.readFile(filePath, 'utf8')
     const newContent = fileContent.replace(
         search instanceof RegExp ? search : new RegExp(search, 'g'),
         replacement,
     )
-    await fs.writeFile(filePath, newContent, 'utf-8')
+    await fs.writeFile(filePath, newContent, 'utf8')
 }
 
-async function* walkDirGen(dir, ignoredItems) {
-    for (const f of await fs.readdir(dir)) {
-        const dirPath = path.join(dir, f)
-        const isDirectory = (await fs.stat(dirPath)).isDirectory()
+async function* walkDirectory(directory, ignoredItems) {
+    for (const f of await fs.readdir(directory)) {
+        const directoryPath = path.join(directory, f)
+        const pathStat = await fs.stat(directoryPath)
+        const isDirectory = pathStat.isDirectory()
 
-        if (ignoredItems.has(dirPath) || ignoredItems.has(f)) {
+        if (ignoredItems.has(directoryPath) || ignoredItems.has(f)) {
             continue
         }
 
         if (isDirectory) {
-            yield* walkDirGen(dirPath, ignoredItems)
+            yield* walkDirectory(directoryPath, ignoredItems)
         } else {
-            yield dirPath
+            yield directoryPath
         }
     }
 }
@@ -117,7 +120,7 @@ Created using [nodejs-project](https://github.com/samialdury/nodejs-project) tem
     ])
 
     const promises = []
-    for await (const filePath of walkDirGen(rootDirectory, ignoredItems)) {
+    for await (const filePath of walkDirectory(rootDirectory, ignoredItems)) {
         promises.push(
             replaceInFile(filePath, defaultProjectName, targetProjectName),
         )
