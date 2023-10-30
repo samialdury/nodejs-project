@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   envey:
-    specifier: 2.2.0
-    version: 2.2.0(zod@3.22.4)
+    specifier: 2.2.1
+    version: 2.2.1(zod@3.22.4)
   pino:
-    specifier: 8.16.0
-    version: 8.16.0
+    specifier: 8.16.1
+    version: 8.16.1
   zod:
     specifier: 3.22.4
     version: 3.22.4
@@ -21,7 +21,7 @@ devDependencies:
     version: 17.7.2
   '@samialdury/config':
     specifier: 6.0.0
-    version: 6.0.0(@commitlint/cli@17.7.2)(eslint@8.51.0)(lint-staged@15.0.1)(prettier@3.0.3)(semantic-release@22.0.5)(typescript@5.2.2)
+    version: 6.0.0(@commitlint/cli@17.7.2)(eslint@8.51.0)(lint-staged@15.0.2)(prettier@3.0.3)(semantic-release@22.0.5)(typescript@5.2.2)
   '@total-typescript/ts-reset':
     specifier: 0.5.1
     version: 0.5.1
@@ -38,8 +38,8 @@ devDependencies:
     specifier: 8.0.3
     version: 8.0.3
   lint-staged:
-    specifier: 15.0.1
-    version: 15.0.1
+    specifier: 15.0.2
+    version: 15.0.2
   pino-pretty:
     specifier: 10.2.3
     version: 10.2.3
@@ -724,7 +724,7 @@ packages:
       config-chain: 1.1.13
     dev: true
 
-  /@samialdury/config@6.0.0(@commitlint/cli@17.7.2)(eslint@8.51.0)(lint-staged@15.0.1)(prettier@3.0.3)(semantic-release@22.0.5)(typescript@5.2.2):
+  /@samialdury/config@6.0.0(@commitlint/cli@17.7.2)(eslint@8.51.0)(lint-staged@15.0.2)(prettier@3.0.3)(semantic-release@22.0.5)(typescript@5.2.2):
     resolution: {integrity: sha512-wNjLhljxDzUCF60Y2Z9F3w1b39mYDWkiM9eYcLuP80K5pc9jpmfod0V5LhMzTC9hoTkaRJD1b18aF3DEGJfrIA==}
     peerDependencies:
       '@commitlint/cli': ^17.0.0
@@ -750,7 +750,7 @@ packages:
       eslint-plugin-react-hooks: 4.6.0(eslint@8.51.0)
       eslint-plugin-unicorn: 48.0.1(eslint@8.51.0)
       globals: 13.23.0
-      lint-staged: 15.0.1
+      lint-staged: 15.0.2
       prettier: 3.0.3
       prettier-plugin-packagejson: 2.4.6(prettier@3.0.3)
       prettier-plugin-sh: 0.13.1(prettier@3.0.3)
@@ -1886,8 +1886,8 @@ packages:
       java-properties: 1.0.2
     dev: true
 
-  /envey@2.2.0(zod@3.22.4):
-    resolution: {integrity: sha512-yemIczrg1ggr/AteWwtOnbKLdMxXcnPFL1czljKeLOWHtC4qBdczeNNgGO4KKe12V/GYt1Fe6wRGoqIlfd1kqQ==}
+  /envey@2.2.1(zod@3.22.4):
+    resolution: {integrity: sha512-t5+lAVt+9Cs/X2v/JPc9qK8U6E3tNR+6qGiTaE5aYclWelOdLZxhr5v8bMFSn0DImcFimKXXPQoDAQhNJXscQQ==}
     engines: {node: '>=20'}
     peerDependencies:
       zod: ^3.0.0
@@ -3403,8 +3403,8 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 
-  /lint-staged@15.0.1:
-    resolution: {integrity: sha512-2IU5OWmCaxch0X0+IBF4/v7sutpB+F3qoXbro43pYjQTOo5wumckjxoxn47pQBqqBsCWrD5HnI2uG/zJA7isew==}
+  /lint-staged@15.0.2:
+    resolution: {integrity: sha512-vnEy7pFTHyVuDmCAIFKR5QDO8XLVlPFQQyujQ/STOxe40ICWqJ6knS2wSJ/ffX/Lw0rz83luRDh+ET7toN+rOw==}
     engines: {node: '>=18.12.0'}
     hasBin: true
     dependencies:
@@ -3413,17 +3413,17 @@ packages:
       debug: 4.3.4
       execa: 8.0.1
       lilconfig: 2.1.0
-      listr2: 7.0.1
+      listr2: 7.0.2
       micromatch: 4.0.5
       pidtree: 0.6.0
       string-argv: 0.3.2
-      yaml: 2.3.2
+      yaml: 2.3.3
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /listr2@7.0.1:
-    resolution: {integrity: sha512-nz+7hwgbDp8eWNoDgzdl4hA/xDSLrNRzPu1TLgOYs6l5Y+Ma6zVWWy9Oyt9TQFONwKoSPoka3H50D3vD5EuNwg==}
+  /listr2@7.0.2:
+    resolution: {integrity: sha512-rJysbR9GKIalhTbVL2tYbF2hVyDnrf7pFUZBwjPaMIdadYHmeT+EVi/Bu3qd7ETQPahTotg2WRCatXwRBW554g==}
     engines: {node: '>=16.0.0'}
     dependencies:
       cli-truncate: 3.1.0
@@ -4205,8 +4205,8 @@ packages:
     resolution: {integrity: sha512-cHjPPsE+vhj/tnhCy/wiMh3M3z3h/j15zHQX+S9GkTBgqJuTuJzYJ4gUyACLhDaJ7kk9ba9iRDmbH2tJU03OiA==}
     dev: false
 
-  /pino@8.16.0:
-    resolution: {integrity: sha512-UUmvQ/7KTZt/vHjhRrnyS7h+J7qPBQnpG80V56xmIC+o9IqYmQOw/UIny9S9zYDfRBR0ClouCr464EkBMIT7Fw==}
+  /pino@8.16.1:
+    resolution: {integrity: sha512-3bKsVhBmgPjGV9pyn4fO/8RtoVDR8ssW1ev819FsRXlRNgW8gR/9Kx+gCK4UPWd4JjrRDLWpzd/pb1AyWm3MGA==}
     hasBin: true
     dependencies:
       atomic-sleep: 1.0.0
@@ -4394,7 +4394,7 @@ packages:
     dependencies:
       find-up: 6.3.0
       read-pkg: 8.1.0
-      type-fest: 4.3.1
+      type-fest: 4.4.0
     dev: true
 
   /read-pkg-up@7.0.1:
@@ -5251,11 +5251,6 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /type-fest@4.3.1:
-    resolution: {integrity: sha512-pphNW/msgOUSkJbH58x8sqpq8uQj6b0ZKGxEsLKMUnGorRcDjrUaLS+39+/ub41JNTwrrMyJcUB8+YZs3mbwqw==}
-    engines: {node: '>=16'}
-    dev: true
-
   /type-fest@4.4.0:
     resolution: {integrity: sha512-HT3RRs7sTfY22KuPQJkD/XjbTbxgP2Je5HPt6H6JEGvcjHd5Lqru75EbrP3tb4FYjNJ+DjLp+MNQTFQU0mhXNw==}
     engines: {node: '>=16'}
@@ -5474,8 +5469,8 @@ packages:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
 
-  /yaml@2.3.2:
-    resolution: {integrity: sha512-N/lyzTPaJasoDmfV7YTrYCI0G/3ivm/9wdG0aHuheKowWQwGTsK0Eoiw6utmzAnI6pkJa0DUVygvp3spqqEKXg==}
+  /yaml@2.3.3:
+    resolution: {integrity: sha512-zw0VAJxgeZ6+++/su5AFoqBbZbrEakwu+X0M5HmcwUiBL7AzcuPKjj5we4xfQLp78LkEMpD0cOnUhmgOVy3KdQ==}
     engines: {node: '>= 14'}
     dev: true
 
