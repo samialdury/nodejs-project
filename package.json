@@ -13,7 +13,7 @@
         "@samialdury/config": "6.0.0",
         "@total-typescript/ts-reset": "0.5.1",
         "@types/node": "20.8.9",
-        "eslint": "8.51.0",
+        "eslint": "8.52.0",
         "glob": "10.3.10",
         "husky": "8.0.3",
         "lint-staged": "15.0.2",
