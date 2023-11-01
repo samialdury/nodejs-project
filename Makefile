@@ -40,7 +40,7 @@ endif
 
 .PHONY: dev
 dev: ## run TS and watch for changes
-	@node --env-file .dev.env --no-warnings --loader tsx --watch --watch-preserve-output $(SRC_DIR)/main.ts | $(BIN)/pino-pretty
+	@node --env-file .dev.env --no-warnings --import tsx --watch --watch-preserve-output $(SRC_DIR)/main.ts | $(BIN)/pino-pretty
 
 .PHONY: run
 run: ## run JS
@@ -61,11 +61,11 @@ build-image: ## build Docker image (args=<build args>?, tag=<string>?)
 
 .PHONY: test
 test: ## run tests
-	@$(BIN)/glob -c 'node --env-file .test.env --no-warnings --loader tsx --test' '{src,test}/**/*.test.ts'
+	@$(BIN)/glob -c 'node --env-file .test.env --no-warnings --import tsx --test' '{src,test}/**/*.test.ts'
 
 .PHONY: test-watch
 test-watch: ## run tests and watch for changes
-	@$(BIN)/glob -c 'node --env-file .test.env --no-warnings --loader tsx --watch --watch-preserve-output --test' '{src,test}/**/*.test.ts'
+	@$(BIN)/glob -c 'node --env-file .test.env --no-warnings --import tsx --watch --watch-preserve-output --test' '{src,test}/**/*.test.ts'
 
 ##@ Code quality
 
