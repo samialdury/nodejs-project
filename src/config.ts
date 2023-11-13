@@ -25,6 +25,10 @@ const schema = {
         env: 'PROJECT_NAME',
         format: z.string().default('nodejs-project'),
     },
+    env: {
+        env: 'ENV',
+        format: z.enum(['prod', 'dev', 'test']).default('prod'),
+    },
 } satisfies EnveySchema
 
 export type Config = InferEnveyConfig<typeof schema>

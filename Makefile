@@ -40,11 +40,11 @@ endif
 
 .PHONY: dev
 dev: ## run TS and watch for changes
-	@node --env-file .dev.env --no-warnings --import tsx --watch --watch-preserve-output $(SRC_DIR)/main.ts | $(BIN)/pino-pretty
+	@node --env-file .dev.env --no-warnings --import tsx --watch --watch-preserve-output $(SRC_DIR)/main.ts
 
 .PHONY: run
 run: ## run JS
-	@node --env-file .env $(BUILD_DIR)/$(SRC_DIR)/main.js | $(BIN)/pino-pretty
+	@node --env-file .env $(BUILD_DIR)/$(SRC_DIR)/main.js
 
 ##@ Build
 

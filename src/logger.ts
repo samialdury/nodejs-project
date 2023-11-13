@@ -7,6 +7,14 @@ export function initLogger(config: Config): Logger {
     const logger = pino({
         level: config.logLevel,
         name: config.projectName,
+        ...(config.env !== 'prod' && {
+            transport: {
+                target: 'pino-pretty',
+                options: {
+                    colorize: true,
+                },
+            },
+        }),
     })
 
     logger.debug('Logger initialized')
