@@ -1,5 +1,4 @@
 ARG NODE_VERSION=20
-ARG PNPM_VERSION=8
 ARG TINI_VERSION="v0.19.0"
 ARG WORK_DIR="/app"
 
@@ -16,7 +15,6 @@ ARG ENV="prod"
 
 FROM node:${NODE_VERSION}-alpine as node-alpine
 
-ARG PNPM_VERSION
 ARG TINI_VERSION
 
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static /tini
@@ -24,7 +22,11 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-stati
 RUN chmod +x /tini
 RUN apk --no-cache add curl
 RUN curl -sf https://gobinaries.com/tj/node-prune | sh
-RUN npm install --global pnpm@${PNPM_VERSION}
+
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+
+RUN corepack enable
 
 ################################################################
 #                                                              #
@@ -46,16 +48,18 @@ ARG WORK_DIR
 
 WORKDIR ${WORK_DIR}
 
-COPY package.json package.json
+# pnpm fetch does require only lockfile
 COPY pnpm-lock.yaml pnpm-lock.yaml
 
+# If you patched any package, include patches before running pnpm fetch
 RUN pnpm fetch
 
+COPY package.json package.json
 COPY tsconfig.base.json tsconfig.base.json
 COPY tsconfig.prod.json tsconfig.prod.json
 COPY src src
 
-RUN pnpm install --offline --frozen-lockfile
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --offline --frozen-lockfile
 RUN ./node_modules/.bin/tsc --project ./tsconfig.prod.json
 
 ################################################################
@@ -72,11 +76,15 @@ WORKDIR ${WORK_DIR}
 
 ENV NODE_ENV="production"
 
-COPY --from=build-js ${WORK_DIR}/package.json package.json
+# pnpm fetch does require only lockfile
 COPY --from=build-js ${WORK_DIR}/pnpm-lock.yaml pnpm-lock.yaml
 
-RUN pnpm fetch
-RUN pnpm install --offline --frozen-lockfile --prod
+# If you patched any package, include patches before running pnpm fetch
+RUN pnpm fetch --prod
+
+COPY --from=build-js ${WORK_DIR}/package.json package.json
+
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --offline --frozen-lockfile --prod
 RUN node-prune
 
 ################################################################
