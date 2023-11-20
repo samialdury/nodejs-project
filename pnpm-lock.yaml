@@ -9,8 +9,8 @@ dependencies:
     specifier: 2.2.1
     version: 2.2.1(zod@3.22.4)
   pino:
-    specifier: 8.16.1
-    version: 8.16.1
+    specifier: 8.16.2
+    version: 8.16.2
   zod:
     specifier: 3.22.4
     version: 3.22.4
@@ -53,8 +53,8 @@ devDependencies:
     specifier: 10.9.1
     version: 10.9.1(@types/node@20.9.0)(typescript@5.2.2)
   tsx:
-    specifier: 4.1.0
-    version: 4.1.0
+    specifier: 4.1.2
+    version: 4.1.2
   typescript:
     specifier: 5.2.2
     version: 5.2.2
@@ -4287,8 +4287,8 @@ packages:
     resolution: {integrity: sha512-cHjPPsE+vhj/tnhCy/wiMh3M3z3h/j15zHQX+S9GkTBgqJuTuJzYJ4gUyACLhDaJ7kk9ba9iRDmbH2tJU03OiA==}
     dev: false
 
-  /pino@8.16.1:
-    resolution: {integrity: sha512-3bKsVhBmgPjGV9pyn4fO/8RtoVDR8ssW1ev819FsRXlRNgW8gR/9Kx+gCK4UPWd4JjrRDLWpzd/pb1AyWm3MGA==}
+  /pino@8.16.2:
+    resolution: {integrity: sha512-2advCDGVEvkKu9TTVSa/kWW7Z3htI/sBKEZpqiHk6ive0i/7f5b1rsU8jn0aimxqfnSz5bj/nOYkwhBUn5xxvg==}
     hasBin: true
     dependencies:
       atomic-sleep: 1.0.0
@@ -5269,8 +5269,8 @@ packages:
       typescript: 5.2.2
     dev: true
 
-  /tsx@4.1.0:
-    resolution: {integrity: sha512-u4l17Yd63Wsk2fzNn1wZCmcS9kwJ/2ysl7wuoVggv2hd3NjLA5JQPpyJMXoWSXOwOvoQUzNcu/sf/35HEsnXsg==}
+  /tsx@4.1.2:
+    resolution: {integrity: sha512-1spM1bFV6MP2s4tO4tDC7g52fsaFdtEWdO4GfGdqi20qUgPbnAJqixOyIAvCSx1DDj3YIUB4CD06owTWUsOAuQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
