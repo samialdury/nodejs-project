@@ -19,8 +19,8 @@
         "lint-staged": "15.2.0",
         "pino-pretty": "10.2.3",
         "prettier": "3.1.0",
-        "semantic-release": "22.0.10",
-        "ts-node": "10.9.1",
+        "semantic-release": "22.0.12",
+        "ts-node": "10.9.2",
         "tsx": "4.6.2",
         "typescript": "5.3.3"
     },
