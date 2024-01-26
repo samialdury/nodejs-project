@@ -21,7 +21,7 @@ devDependencies:
     version: 18.4.4(@types/node@20.11.5)(typescript@5.3.3)
   '@samialdury/config':
     specifier: 6.4.0
-    version: 6.4.0(@commitlint/cli@18.4.4)(@remix-run/dev@1.19.3)(eslint@8.56.0)(lint-staged@15.2.0)(prettier@3.1.1)(semantic-release@22.0.12)(typescript@5.3.3)
+    version: 6.4.0(@commitlint/cli@18.4.4)(@remix-run/dev@1.19.3)(eslint@8.56.0)(lint-staged@15.2.0)(prettier@3.2.4)(semantic-release@22.0.12)(typescript@5.3.3)
   '@total-typescript/ts-reset':
     specifier: 0.5.1
     version: 0.5.1
@@ -44,8 +44,8 @@ devDependencies:
     specifier: 10.3.1
     version: 10.3.1
   prettier:
-    specifier: 3.1.1
-    version: 3.1.1
+    specifier: 3.2.4
+    version: 3.2.4
   semantic-release:
     specifier: 22.0.12
     version: 22.0.12(typescript@5.3.3)
@@ -71,7 +71,7 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.9
+      '@jridgewell/trace-mapping': 0.3.22
     dev: true
 
   /@babel/code-frame@7.22.13:
@@ -2422,7 +2422,7 @@ packages:
     dev: true
     optional: true
 
-  /@samialdury/config@6.4.0(@commitlint/cli@18.4.4)(@remix-run/dev@1.19.3)(eslint@8.56.0)(lint-staged@15.2.0)(prettier@3.1.1)(semantic-release@22.0.12)(typescript@5.3.3):
+  /@samialdury/config@6.4.0(@commitlint/cli@18.4.4)(@remix-run/dev@1.19.3)(eslint@8.56.0)(lint-staged@15.2.0)(prettier@3.2.4)(semantic-release@22.0.12)(typescript@5.3.3):
     resolution: {integrity: sha512-rjm03Do8b0B2cu0SPW+x2HR8BIDDGjGPX1q6CU+a6oaW0tvc9YA+57oM92ySvNQWGbHyg2YZVG9zB4XQlOXOnw==}
     peerDependencies:
       '@commitlint/cli': ^18.0.0
@@ -2453,13 +2453,13 @@ packages:
       eslint-plugin-unicorn: 50.0.1(eslint@8.56.0)
       globals: 13.24.0
       lint-staged: 15.2.0
-      prettier: 3.1.1
-      prettier-plugin-autocorrect: 0.4.1(prettier@3.1.1)
-      prettier-plugin-packagejson: 2.4.9(prettier@3.1.1)
-      prettier-plugin-sh: 0.13.1(prettier@3.1.1)
-      prettier-plugin-sql: 0.18.0(prettier@3.1.1)
-      prettier-plugin-tailwindcss: 0.5.11(prettier@3.1.1)
-      prettier-plugin-toml: 2.0.1(prettier@3.1.1)
+      prettier: 3.2.4
+      prettier-plugin-autocorrect: 0.4.1(prettier@3.2.4)
+      prettier-plugin-packagejson: 2.4.9(prettier@3.2.4)
+      prettier-plugin-sh: 0.13.1(prettier@3.2.4)
+      prettier-plugin-sql: 0.18.0(prettier@3.2.4)
+      prettier-plugin-tailwindcss: 0.5.11(prettier@3.2.4)
+      prettier-plugin-toml: 2.0.1(prettier@3.2.4)
       semantic-release: 22.0.12(typescript@5.3.3)
     transitivePeerDependencies:
       - '@ianvs/prettier-plugin-sort-imports'
@@ -3145,6 +3145,14 @@ packages:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
       acorn: 8.10.0
+    dev: true
+
+  /acorn-jsx@5.3.2(acorn@8.11.3):
+    resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
+    peerDependencies:
+      acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      acorn: 8.11.3
     dev: true
 
   /acorn-walk@8.2.0:
@@ -7198,8 +7206,8 @@ packages:
   /micromark-extension-mdxjs@1.0.1:
     resolution: {integrity: sha512-7YA7hF6i5eKOfFUzZ+0z6avRG52GpWR8DL+kN47y3f2KhxbBZMhmxe7auOeaTBrW2DenbbZTf1ea9tA2hDpC2Q==}
     dependencies:
-      acorn: 8.10.0
-      acorn-jsx: 5.3.2(acorn@8.10.0)
+      acorn: 8.11.3
+      acorn-jsx: 5.3.2(acorn@8.11.3)
       micromark-extension-mdx-expression: 1.0.8
       micromark-extension-mdx-jsx: 1.0.5
       micromark-extension-mdx-md: 1.0.1
@@ -8424,17 +8432,17 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-autocorrect@0.4.1(prettier@3.1.1):
+  /prettier-plugin-autocorrect@0.4.1(prettier@3.2.4):
     resolution: {integrity: sha512-smL0VQEG+T4tIuOCCgxCTVeBpM3ybmmxIevitU2ktPyY0MtW1StyNJxt36i0jz19er+AsaklBFwCmj+ZUph+0w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       prettier: ^3.0.0
     dependencies:
       autocorrect-node: 2.8.4
-      prettier: 3.1.1
+      prettier: 3.2.4
     dev: true
 
-  /prettier-plugin-packagejson@2.4.9(prettier@3.1.1):
+  /prettier-plugin-packagejson@2.4.9(prettier@3.2.4):
     resolution: {integrity: sha512-b3Q7agXVqxK3UpYEJr0xLD51SxriYXESWUCjmxOBUGqnPFZOg9jZGZ+Ptzq252I6OqzXN2rj1tJIFq6KOGLLJw==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -8442,23 +8450,23 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 3.1.1
+      prettier: 3.2.4
       sort-package-json: 2.6.0
       synckit: 0.9.0
     dev: true
 
-  /prettier-plugin-sh@0.13.1(prettier@3.1.1):
+  /prettier-plugin-sh@0.13.1(prettier@3.2.4):
     resolution: {integrity: sha512-ytMcl1qK4s4BOFGvsc9b0+k9dYECal7U29bL/ke08FEUsF/JLN0j6Peo0wUkFDG4y2UHLMhvpyd6Sd3zDXe/eg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.0
     dependencies:
       mvdan-sh: 0.10.1
-      prettier: 3.1.1
+      prettier: 3.2.4
       sh-syntax: 0.4.1
     dev: true
 
-  /prettier-plugin-sql@0.18.0(prettier@3.1.1):
+  /prettier-plugin-sql@0.18.0(prettier@3.2.4):
     resolution: {integrity: sha512-E7WXooLNtWyv79sYYHtQbfvXZ5B/OOR0ySBsB2evfrfvD4wJos1OKLBvVLC/a7+7YpG30bSUTgc2DEwz8ctPmQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -8466,12 +8474,12 @@ packages:
     dependencies:
       jsox: 1.2.118
       node-sql-parser: 4.17.0
-      prettier: 3.1.1
+      prettier: 3.2.4
       sql-formatter: 15.1.0
       tslib: 2.6.2
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.11(prettier@3.1.1):
+  /prettier-plugin-tailwindcss@0.5.11(prettier@3.2.4):
     resolution: {integrity: sha512-AvI/DNyMctyyxGOjyePgi/gqj5hJYClZ1avtQvLlqMT3uDZkRbi4HhGUpok3DRzv9z7Lti85Kdj3s3/1CeNI0w==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -8520,17 +8528,17 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
-      prettier: 3.1.1
+      prettier: 3.2.4
     dev: true
 
-  /prettier-plugin-toml@2.0.1(prettier@3.1.1):
+  /prettier-plugin-toml@2.0.1(prettier@3.2.4):
     resolution: {integrity: sha512-99z1YOkViECHtXQjGIigd3talI/ybUI1zB3yniAwUrlWBXupNXThB1hM6bwSMUEj2/+tomTlMtT98F5t4s8IWA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.3
     dependencies:
       '@taplo/lib': 0.4.0-alpha.2
-      prettier: 3.1.1
+      prettier: 3.2.4
     dev: true
 
   /prettier@2.8.8:
@@ -8539,8 +8547,8 @@ packages:
     hasBin: true
     dev: true
 
-  /prettier@3.1.1:
-    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
+  /prettier@3.2.4:
+    resolution: {integrity: sha512-FWu1oLHKCrtpO1ypU6J0SbK2d9Ckwysq6bHj/uaCP26DxrPpppCLQRGVuqAxSTvhF00AcvDRyYrLNW7ocBhFFQ==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
