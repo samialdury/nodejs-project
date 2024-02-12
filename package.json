@@ -16,7 +16,7 @@
         "eslint": "8.56.0",
         "glob": "10.3.10",
         "husky": "8.0.3",
-        "lint-staged": "15.2.0",
+        "lint-staged": "15.2.2",
         "pino-pretty": "10.3.1",
         "prettier": "3.2.4",
         "semantic-release": "22.0.12",
