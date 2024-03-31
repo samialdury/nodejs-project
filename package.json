@@ -14,7 +14,7 @@
         "@total-typescript/ts-reset": "0.5.1",
         "@types/node": "20.11.30",
         "eslint": "8.57.0",
-        "glob": "10.3.10",
+        "glob": "10.3.12",
         "husky": "8.0.3",
         "lint-staged": "15.2.2",
         "pino-pretty": "10.3.1",
