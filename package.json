@@ -9,7 +9,7 @@
         "zod": "3.22.4"
     },
     "devDependencies": {
-        "@commitlint/cli": "18.6.1",
+        "@commitlint/cli": "19.3.0",
         "@samialdury/config": "6.5.1",
         "@total-typescript/ts-reset": "0.5.1",
         "@types/node": "20.12.7",
